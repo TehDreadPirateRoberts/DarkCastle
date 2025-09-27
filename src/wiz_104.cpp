@@ -1749,6 +1749,7 @@ int do_show(Character *ch, char *argument, cmd_t cmd)
 	}
 	else if (is_abbrev(type, "keydoorcombo"))
 	{
+		argument = one_argument(argument, name);
 		if (!*name)
 		{
 			ch->sendln("Show which key? (# of key)");
